@@ -7,7 +7,7 @@ import CustomCamera from './CustomCamera';
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <CustomCamera />
+      {/* <CustomCamera /> */}
       {/* <TakePic /> */}
       {/* <ImagePicker /> */}
     </SafeAreaView>

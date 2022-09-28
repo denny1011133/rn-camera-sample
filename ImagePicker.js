@@ -47,9 +47,8 @@ export default function ImagePickerExample() {
       aspect: [4, 3],
       quality: 1,
     });
-
+    //有可能被取消
     if (!result.cancelled) {
-      //有可能被取消
       result.type === 'image' ? setImage(result.uri) : setVideo(result.uri);
     }
   };
