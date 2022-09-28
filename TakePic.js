@@ -7,7 +7,7 @@ import {
 import { useState } from 'react';
 
 function TakePic() {
-  const [pickedImage, setPickedImage] = useState();
+  const [pickedImage, setPickedImage] = useState(null);
 
   const [cameraPermissionInformation, requestPermission] =
     useCameraPermissions(); //check or request permissions to access the camera
@@ -46,7 +46,7 @@ function TakePic() {
       aspect: [16, 9],
       quality: 0.5,
     });
-    // console.log('image', image); // 取消的話 image  {"cancelled": true}
+    // console.log('image', image); // 取消的話 image => {"cancelled": true}
     setPickedImage(image.uri);
   };
 

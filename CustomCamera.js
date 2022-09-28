@@ -32,15 +32,11 @@ export default function CustomCamera() {
     const recordedVideo = await cameraRef.current.recordAsync();
 
     setVideo(recordedVideo);
-
-    console.log('recording started');
   };
 
   const stopRecord = function () {
     setRecording(false);
     cameraRef.current.stopRecording();
-
-    console.log('recording stopped');
   };
 
   return (
@@ -114,5 +110,5 @@ const styles = StyleSheet.create({
 // you should unmount Camera components whenever a screen is unfocused.
 
 // CustomCamera 是靠 true false 去判斷是否要 render Camera component
-// CustomCamera 可以 granted 可以不用 granted
+// CustomCamera 可以不需要系統的 granted
 // 系統的 Camera 是靠 true false 去判斷是否要呼叫 launchCameraAsync  launchImageLibraryAsync
